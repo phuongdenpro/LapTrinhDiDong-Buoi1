@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        var root = document.getElementById("root")
+        var input1 = document.createElement("input")
+        input1.setAttribute("type", "text")
+        var input2 = document.createElement("input")
+        input2.setAttribute("type", "text")
+
+        var label1 = document.createTextNode("A")
+        var label2 = document.createTextNode("B")
+
+        var button = document.createElement("button")
+        button.innerText = "click"
+        var label3 = document.createTextNode("Ket qua")
+
+
+
+        root.appendChild(label1)
+        root.appendChild(input1)
+        root.appendChild(document.createElement("br"))
+        root.appendChild(label2)
+        root.appendChild(input2)
+        root.appendChild(document.createElement("br"))
+        root.appendChild(button)
+        root.appendChild(label3)
+        button.addEventListener("click", () => {
+            var a = input1.value
+            var b = input2.value
+            var kq = a * 1 + b * 1
+            label3.nodeValue = " " + kq
+        })
+    </script>
+
+</body>
+
+</html>
